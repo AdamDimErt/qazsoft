@@ -1,0 +1,135 @@
+.button-active{
+    background-color: #7D9AFF !important;
+    color: #fff !important;
+}
+
+.account{
+    padding: 80px 40px;
+    width: 1180px;
+    &-head{
+        display: flex;
+        margin-bottom: 60px;
+    }
+    &-info{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        &__name{
+            display: flex;
+        }
+    }
+    &-social{
+        &__list{
+    display: flex;  
+    li{
+        display: flex;
+        flex-direction: column;
+       p{
+        display: flex;
+    
+        margin-right: 40px;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        img{
+            width: 16px;
+            height: 16px;
+        }
+
+
+       }
+       span{
+        margin-bottom: 5px;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #999999;
+    }
+    }
+
+        }
+
+    }
+
+    &-amount{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        p{
+
+            span{
+                color: #999;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal
+            }
+        }
+        &__button{
+            width: 400px;
+            display: flex;
+            justify-content: space-around;
+     button{
+        border-radius: 10px;
+        border: 1px solid #7D9AFF;
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        padding: 10px;
+        color: #7D9AFF;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        
+     }
+        }
+    }
+    &-title{
+        color: #2A2A28;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+        font-weight: 500;
+line-height: normal;
+
+    }
+    &-bag{
+        
+    }
+    &-profit{
+        display: flex;
+        
+        p{
+            color: #2A2A28;
+            margin-top: 30px;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+        }
+        span{
+            color: #2A2A28;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-right: 20px;
+        }
+    }
+    &-myAssets{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}

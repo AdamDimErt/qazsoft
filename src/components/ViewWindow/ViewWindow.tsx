@@ -3,13 +3,19 @@
 import { FC, useState } from "react";
 import { Login } from "../Login/Login";
 import "./ViewWindow.scss";
-import FullScreen from "../../assets/fullscreen.png";
+import Screen from "../../assets/fullscreen.png";
 import Draggable from "react-draggable";
+import { useAppSelector } from "app/hooks";
+import {
+  FullScreen,
+  useFullScreenHandle,
+} from "react-full-screen";
 
 const ViewWindow: FC = () => {
   const [activeItems, setActiveItems] = useState<string[]>([
     "Email",
   ]);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleItemClick = (item: string) => {
     setActiveItems((prevActiveItems) =>
@@ -18,6 +24,7 @@ const ViewWindow: FC = () => {
         : [...prevActiveItems, item],
     );
   };
+  const screen1 = useFullScreenHandle();
 
   const isItemActive = (item: string) =>
     activeItems.includes(item);
@@ -28,11 +35,18 @@ const ViewWindow: FC = () => {
         <p>View window</p>
       </div>
 
-      <div className='window-block'>
-        <Draggable>
+      <FullScreen
+        handle={screen1}
+        onChange={(
+          isFullscreen:
+            | boolean
+            | ((prevState: boolean) => boolean),
+        ) => setIsFullscreen(isFullscreen)}
+      >
+        <div className='window-block'>
           <Login />
-        </Draggable>
-      </div>
+        </div>
+      </FullScreen>
 
       <div className='window-footer'>
         <p>Add components:</p>
@@ -83,9 +97,10 @@ const ViewWindow: FC = () => {
           </li>
         </ul>
         <img
-          src={FullScreen}
+          src={Screen}
           className='window-footer__img'
           alt='FullScreen'
+          onClick={screen1.enter}
         />
       </div>
     </div>

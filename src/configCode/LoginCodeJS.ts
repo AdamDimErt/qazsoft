@@ -1,4 +1,4 @@
-export const loginComponentCode = `
+export const loginComponentCodeJS = `
 <form className='form'>
   <h3 className='form-title'>Вход</h3>
   <div className='form-block'>

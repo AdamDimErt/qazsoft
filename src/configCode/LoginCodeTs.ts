@@ -1,4 +1,4 @@
-export const loginComponentCode = `
+export const loginComponentCodeTS = `
 /** @format */
 import { FC } from "react";
 import { Input } from "../ui/Input/Input";
