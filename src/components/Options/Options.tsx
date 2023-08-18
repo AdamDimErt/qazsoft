@@ -64,10 +64,10 @@ export const Options = (props: Props) => {
           type='number'
           placeholder={""}
           name={"width"}
-          nameLabel={"Media (1920-360px)"}
+          nameLabel={"Media (1920-360px)е"}
           value={options.width}
           onChange={handleChange}
-          className='input-options'
+          className='input-options mediaInput'
           label='width(in px)'
         />
         {/* font family */}
@@ -78,7 +78,7 @@ export const Options = (props: Props) => {
           nameLabel={"Font-family"}
           value={options.family}
           onChange={handleChange}
-          className='input-options'
+          className='input-options wrapInput'
           label='family'
         />
         {/* fontSize */}
@@ -89,7 +89,7 @@ export const Options = (props: Props) => {
           nameLabel={"Font Size"}
           value={options.fontSize}
           onChange={handleChange}
-          className='input-options'
+          className='input-options wrapInput'
           label='(in px)'
         />
         {/* border radius frame */}
@@ -100,7 +100,7 @@ export const Options = (props: Props) => {
           nameLabel={"Border-radius-frame"}
           value={options.borderRadiusFrame}
           onChange={handleChange}
-          className='input-options'
+          className='input-options wrapInput'
           label='round'
         />
         <Input
@@ -110,7 +110,7 @@ export const Options = (props: Props) => {
           nameLabel={"Font-size"}
           value={options.fontSize}
           onChange={handleChange}
-          className='input-options'
+          className='input-options wrapInput'
           label='(in px)'
         />
         <Input
@@ -120,7 +120,7 @@ export const Options = (props: Props) => {
           nameLabel={"Border-raduis-frame"}
           value={options.borderRadiusFrame}
           onChange={handleChange}
-          className='input-options'
+          className='input-options wrapInput'
           label='(in px)'
         />
       </div>
