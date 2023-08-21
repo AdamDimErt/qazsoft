@@ -14,7 +14,7 @@ type Props = {}
 const Code = (props: Props) => {
   return (
     <div className='code'>
-        <div className="code-header"><p>Editor</p></div>
+        <div className="code-header"><h3>Editor</h3></div>
         <div className="code-block">
             <SyntaxHighlighter customStyle={{ marginBottom: "30px" }} className="code-code" language="jsx" style={oneDark}>
                 {loginComponentCodeTS}
@@ -22,8 +22,8 @@ const Code = (props: Props) => {
         </div>
         <div className="code-footer">
             <ul className='code-footer__list'>
-                <li >React js</li>
-                <li>React ts</li>
+                <li >React JavaScript</li>
+                <li>Type Script</li>
                 <li>Scss</li>
             </ul>
         </div>

@@ -32,7 +32,7 @@ const ViewWindow: FC = () => {
   return (
     <div className='window'>
       <div className='window-head'>
-        <p>View window</p>
+        <h3>View window</h3>
       </div>
 
       <FullScreen
@@ -49,6 +49,7 @@ const ViewWindow: FC = () => {
       </FullScreen>
 
       <div className='window-footer'>
+        <div className="window__components">
         <p>Add components:</p>
         <ul className='window-footer__list'>
           <li
@@ -96,6 +97,7 @@ const ViewWindow: FC = () => {
             Email
           </li>
         </ul>
+        </div>
         <img
           src={Screen}
           className='window-footer__img'
