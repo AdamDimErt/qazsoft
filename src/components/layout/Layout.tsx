@@ -10,7 +10,7 @@ type Props = {
 export const Layout = ({ children }: Props) => {
   return (
     <>
-      <AntLayout.Content>{children}</AntLayout.Content>
+      {children}
     </>
   );
 };

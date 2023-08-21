@@ -12,7 +12,10 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <CodeEditor />
+      <main>
+      {/* <CodeEditor /> */}
+      </main>
+
     </div>
   );
 }
