@@ -2,12 +2,24 @@
 
 import { FC } from "react";
 import "./Button.scss";
+interface ButtonProps {
+  styleButton: {
+    background: string
+    
+  },
 
-type Props = {};
+  // existing props
+}
 
-export const Button: FC = (props: Props) => {
+export const Button: FC<ButtonProps> = ({
+  styleButton,
+}: any) => {
   return (
-    <button className='button' type='submit'>
+    <button
+      style={styleButton}
+      className='button'
+      type='submit'
+    >
       Войти
     </button>
   );

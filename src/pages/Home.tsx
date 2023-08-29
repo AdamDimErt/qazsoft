@@ -1,9 +1,17 @@
-import React from 'react'
+/** @format */
 
-type Props = {}
+import { Layout } from "layout/Layout";
+import CodeEditor from "../pages/CodeEditor";
+import React from "react";
 
-const Home = (props: Props) => {
+type Props = {
+  type?:string
+};
+
+export const Home = ({type}: Props) => {
   return (
-    <div>Home</div>
-  )
-}
+    <Layout>
+      <CodeEditor type={type} />
+    </Layout>
+  );
+};

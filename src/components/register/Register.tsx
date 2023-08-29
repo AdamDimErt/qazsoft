@@ -1,18 +1,13 @@
 /** @format */
-import { FC, SetStateAction, useState } from "react";
+import { FC, useState, useRef } from "react";
 import { Input } from "../ui/Input/Input";
-import "./Login.scss";
+import "./register.scss";
 import { Button } from "../ui/Button/Button";
 import { useAppSelector } from "app/hooks";
-import { log } from "console";
+import { CheckBox } from "../../components/ui/checkBox/CheckBox";
 
-export const Login: FC = () => {
+export const Register: FC = () => {
   const [value, setValue] = useState<string>("");
-  const handleSelectChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => {
-    setValue(event.target.value);
-  };
 
   const options = useAppSelector(
     (state) => state.inputSlice,
@@ -27,11 +22,8 @@ export const Login: FC = () => {
     colorButton,
   } = options;
 
-  const WidthMedia = {
-    width: width + "px",
-    fontFamily: fontFamily,
-    borderRadius: borderRadiusFrame + "px",
-  };
+  const lastName = useRef();
+  const Name = useRef();
 
   return (
     <form
@@ -43,8 +35,24 @@ export const Login: FC = () => {
         background: background,
       }}
     >
-      <h3 className='form-title'>Вход</h3>
+      <h3 className='form-title'>Регистрация</h3>
       <div className='form-block'>
+        <Input
+          ref={lastName}
+          type='text'
+          placeholder='Фамилия'
+          name='name'
+          nameLabel='Фамилия'
+          className='input-block'
+        />
+        <Input
+          type='text'
+          placeholder='Имя'
+          name='name'
+          nameLabel='Имя'
+          value=''
+          ref={Name}
+        />
         <Input
           inputStyle={{
             fontSize: fontSize + "px",
@@ -67,11 +75,16 @@ export const Login: FC = () => {
           nameLabel='Введите пароль:'
           value=''
         />
+        <Input
+          type='password'
+          placeholder='пароль'
+          name='password'
+          nameLabel='Введите пароль повторно:'
+          value=''
+        />
       </div>
-      <a className='form-link' href='#'>
-        Забыли пароль?
-      </a>
-      <Button styleButton={{ background: colorButton}} />
+      <CheckBox text='Пользовательское соглашение' />
+      <Button styleButton={{ background: colorButton }} />
     </form>
   );
 };

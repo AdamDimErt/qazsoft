@@ -8,32 +8,43 @@ import { useAppSelector } from "app/hooks";
 interface Props extends InputInterface {
   style?: React.CSSProperties | any;
   inputStyle?: React.CSSProperties | any;
+
   onChange?: (
     event: React.ChangeEvent<HTMLInputElement>,
   ) => void;
 }
 
-export const Input = (props: Props) => {
-  console.log(props.style);
-
-  const data = useAppSelector((state) => state.inputSlice);
-
+export const Input = ({
+  style,
+  inputStyle,
+  nameLabel,
+  className,
+  type,
+  placeholder,
+  name,
+  value,
+  onChange,
+  label,
+  ref,
+}: Props) => {
   return (
-    <label className='input-block' style={props.style}>
-      <p className='input-text'>{props.nameLabel}</p>
+    <label
+      className={className || `input-block`}
+      style={style}
+    >
+      <p >{nameLabel}</p>
       <input
-        style={props.inputStyle}
-        className={props.className || `input-input`}
-        type={props.type}
-        placeholder={props.placeholder}
-        name={props.name}
-        value={props.value}
-        onChange={props.onChange}
+        ref={ref}
+        style={inputStyle}
+        type={type}
+        placeholder={placeholder}
+        name={name}
+        value={value}
+        onChange={onChange}
+        
       />
-      {props.label ? (
-        <span className='input-options__span'>
-          {props.label}
-        </span>
+      {label ? (
+        <span className='input-options__span'>{label}</span>
       ) : (
         ""
       )}

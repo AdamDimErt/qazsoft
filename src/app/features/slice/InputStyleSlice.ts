@@ -65,6 +65,9 @@ const inputSlice = createSlice({
     setColorGradient2(state, action: PayloadAction<string>) {
       state.colorGradient2 = action.payload;
     },
+    setColorGradient3(state, action: PayloadAction<string>) {
+      state.colorGradient2 = action.payload;
+    },
     setColorButton(state, action: PayloadAction<string>) {
       state.colorButton = action.payload;
     },
@@ -72,6 +75,9 @@ const inputSlice = createSlice({
       state.colorButtonGradient1 = action.payload;
     },
     setColorButtonGradient2(state, action: PayloadAction<string>) {
+      state.colorButtonGradient2 = action.payload;
+    },
+    setColorButtonGradient3(state, action: PayloadAction<string>) {
       state.colorButtonGradient2 = action.payload;
     },
     setBackgroundInput(state, action: PayloadAction<string>) {
@@ -93,9 +99,11 @@ export const {
   setBackground,
   setColorGradient1,
   setColorGradient2,
+  setColorGradient3,
   setColorButton,
   setColorButtonGradient1,
   setColorButtonGradient2,
+  setColorButtonGradient3,
   setBackgroundInput,
   setColorFont,
 } = inputSlice.actions;

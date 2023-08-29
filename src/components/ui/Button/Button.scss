@@ -1,11 +1,17 @@
-.button{
-    padding: 0;
-    max-width: 332px;
-    width: 100%;
-    height: 50px;
-    background: linear-gradient(#A3B7FF,#7490F4,#375AD5);
-    border: none;
-    border-radius: 20px;
-    color: #fff;
-    font-size: 16px;
+.button {
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(#a3b7ff, #7490f4, #375ad5);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+
+  &:hover {
+  background: linear-gradient(#879add, #627ad2, #2c4bbb);
+  color: #e1dfdf;
+
+  }
 }

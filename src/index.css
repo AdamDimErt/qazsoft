@@ -85,6 +85,7 @@ video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -102,12 +103,22 @@ section {
 	display: block;
 }
 
+
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
 body {
 	line-height: 1;
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
-	box-sizing: border-box;
+
 	background-color: #F8F5F5;;
 }
 

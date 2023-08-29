@@ -1,13 +1,13 @@
-.selected{
 
-}
 .dropdown{
     &-menu{
         display: flex;
         flex-direction: column;
         margin-bottom: 25px;
+        cursor: pointer;
     }
     &-list{
+        transition: 0.3s;
         li:first-child{
             margin-top: 25px;
         }
@@ -16,4 +16,25 @@
         display: flex;
         justify-content: space-between;
     }
+    &-item{
+        color:  #2A2A28;
+
+    }
+}
+.arrowDown{
+    transition: 0.3s;
+}
+.selected{
+    color: #7694FF !important;
+}
+.border{
+    width: 1px;
+    height: 20px;
+    border-right: 2px solid #7694FF;
+    position: absolute;
+    left: -10px;
+    top: -2px;
+}
+.main-dropdown{
+    position: relative;
 }

@@ -1,0 +1,11 @@
+.history{
+    height: 210px;
+    background-color: #819dff;
+}
+.transaction{
+    &-status{
+        padding: 10px;
+        border-radius: 10px;
+        background: #3B3B3B;
+    }
+}

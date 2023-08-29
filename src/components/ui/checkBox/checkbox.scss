@@ -1,0 +1,60 @@
+.box {
+    display: flex;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 21px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    p{
+    margin-top: 3px;
+margin-left: 10px;
+    }
+  }
+  /* Hide the default style of the checkbox */
+  input[type=checkbox] {
+    visibility: hidden;
+    display: none;
+  }
+  /* Create a custom checkbox */
+  .mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #E5E5E5;
+    border-radius: 5px
+;
+  }
+
+  /* Specify the background color for the checkbox when the checkbox is active */
+  /* Specify the background color for the checkbox when it is checked */
+  .box input:checked + .mark {
+    background-color: #E5E5E5;
+  }
+  /* Checkmark to be shown in checkbox */
+  /* It will not be shown when not checked */
+  .mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Display checkmark when checked */
+  .box input:checked + .mark:after {
+    display: block;
+  }
+  /* Styling the checkmark using webkit */
+  /* Rotated the rectangle by 45 degree and showing only two border to make it look like a tick mark */
+  .box .mark:after {
+    left: 7px;
+    bottom: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid #6280EA;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    
+}
+  

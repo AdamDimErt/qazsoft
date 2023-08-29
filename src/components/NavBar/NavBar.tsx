@@ -4,20 +4,30 @@ import React from "react";
 import Logo from "../../assets/logo.png";
 import "./navbar.scss";
 import DropdownMenu from "../DropdownMenu/DropDownMenu";
+import { MenuItem } from "../DropdownMenu/DropDownMenu";
+import { Link } from "react-router-dom";
+import { Paths } from "Paths";
 
 type Props = {};
+export const NavBar = ({ isOpen }: any) => {
+  console.log(isOpen);
 
-export const NavBar = (props: Props) => {
-  interface MenuItem {
-    label: string;
-    value: string;
-  }
   const web3: MenuItem[] = [
-    { label: "Option 1", value: "option1" },
-    { label: "Option 2", value: "option2" },
-    { label: "Option 3", value: "option3" },
+    { label: "Option 1", value: "option1", link: "/" },
+    { label: "Option 2", value: "option2", link: "/" },
+    { label: "Option 3", value: "option3", link: "/" },
   ];
-  return (
+
+  const custom: MenuItem[] = [
+    { label: "Login", value: "option1", link: "/login" },
+    {
+      label: "Register",
+      value: "/register",
+      link: "/register",
+    },
+  ];
+
+  return isOpen ? ( // Используйте оператор return и условие для возвращаемого JSX
     <div className='navbar'>
       <div className='navbar-logo'>
         <h3>Документация QazSoft</h3>
@@ -31,7 +41,7 @@ export const NavBar = (props: Props) => {
           <DropdownMenu title='Web 3' items={web3} />
           <DropdownMenu
             title='Пользовательский'
-            items={web3}
+            items={custom}
           />
           <DropdownMenu
             title='Администранивный'
@@ -42,11 +52,13 @@ export const NavBar = (props: Props) => {
             items={web3}
           />
           <li>Управление транзакциями</li>
-          <li>История платежей</li>
+          <li>
+            <Link to={Paths.history}>История платежей</Link>
+          </li>
           <li>Попапы</li>
         </ul>
         <div className='navbar-line'></div>
       </nav>
     </div>
-  );
+  ) : null; // В случае, если isOpen равен false, верните null или другой пустой JSX
 };

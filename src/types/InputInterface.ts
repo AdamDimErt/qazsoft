@@ -3,8 +3,8 @@ export interface InputInterface{
     placeholder: string;
     name: string;
     nameLabel: string;
-    value:string | number
+    value?:string | number
     className?:string
     label?:string
-    
+    ref?: any;
 }

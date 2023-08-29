@@ -6,17 +6,21 @@ import Code from "../components/Code/Code";
 import "./codeEditor.scss";
 import ViewWindow from "../components/ViewWindow/ViewWindow";
 import { useAppSelector } from "app/hooks";
+import { Options } from "../components/Options/Options";
 
-type Props = {};
+type Props = {
+  type?: string;
+};
 
-const CodeEditor = (props: Props) => {
-  const data = useAppSelector((state) => state.inputSlice);
-  console.log(data);
-
+const CodeEditor = ({ type }: Props) => {
   return (
     <div className='codeEditor'>
       <Code />
-      <ViewWindow />
+      <ViewWindow type={type}/>
+      <div className='wrapperEditor'>
+        <Options />
+        <div className='codeEmpty'></div>
+      </div>
     </div>
   );
 };

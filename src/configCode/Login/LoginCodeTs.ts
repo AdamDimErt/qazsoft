@@ -1,10 +1,4 @@
 export const loginComponentCodeTS = `
-/** @format */
-import { FC } from "react";
-import { Input } from "../ui/Input/Input";
-import "./Login.scss";
-import { Button } from "../ui/Button/Button";
-
 export const Login: FC = () => {
   return (
     

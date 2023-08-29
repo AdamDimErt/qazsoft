@@ -1,6 +1,4 @@
 export const InputCode = `
-/** @format */
-
 import React from "react";
 import "./Input.scss";
 
