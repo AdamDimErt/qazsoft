@@ -1,4 +1,7 @@
-
+.rotate{
+    transform: rotate(90deg);
+    color: #7694FF;
+}
 .dropdown{
     &-menu{
         display: flex;

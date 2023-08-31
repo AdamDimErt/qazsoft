@@ -1,11 +1,62 @@
 .history{
-    height: 210px;
+    min-height: 210px;
     background-color: #819dff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 1200px;
+    &-block{
+        margin-top: 40px;
+    }
+
+    h3{
+        color: #FFF;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+
+    }
 }
 .transaction{
-    &-status{
-        padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &-time{
+        color: #fff;
+    }
+ &-block{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    justify-content: space-between;
+    h3{
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding: 10px 20px;
         border-radius: 10px;
         background: #3B3B3B;
     }
+    &__price{
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        color: #fff;
+
+    }
+    &__name{
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        color: #fff;
+    }
+ }
 }
