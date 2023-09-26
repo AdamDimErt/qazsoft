@@ -6,10 +6,19 @@ import "./code.scss";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
-import prism from "react-syntax-highlighter/dist/esm/styles/prism/prism";
 import { loginComponentCodeTS } from "../../configCode/Login/LoginCodeTs";
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 type Props = {};
+
+// const renderCode = () => {
+//   if (type === "login") {
+//     return <Login />;
+//   } else if (type === "register") {
+//     return <Register />;
+//   } else if (type === "history") {
+//     return <History />;
+//   }
+// };
 
 const Code = (props: Props) => {
   return (

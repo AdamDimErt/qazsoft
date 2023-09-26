@@ -42,6 +42,8 @@ const ViewWindow: FC<Props> = ({ type }) => {
     }
   };
 
+
+
   const [isOpen, setIsOpen] = useState(false);
   const toggleBurger = () => {
     setIsOpen(!isOpen);
